@@ -4,8 +4,9 @@ import XboxIcon from './assets/icons/xbox.svg';
 import UserIcon from './assets/icons/user.svg';
 import './App.css';
 
-const API_ENDPOINT = '/gamingrom-admin/api/sessions/';
-// const API_ENDPOINT = 'api/sessions/';
+const API_ROOT = '/gamingrom-admin';
+
+const API_ENDPOINT = API_ROOT + '/api/sessions/';
 
 const App = () => {
 
