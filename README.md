@@ -8,13 +8,13 @@ This app doesn't really make sense without first installing [gamingroom-API](htt
 
 ## Install
 
-1. Set your settings in `src/data.js`. You'll want to edit `aapningstider` and `computers`. I can't recall if setting `timeSlotSize`to anything but 15 works, but you can try.
+1. Change `API_ROOT` to wherever you installed the admin panel (i.e. where the "public" folder of the API is exposed to the internet). I was stupid and committed to calling my app `gamingrom` and then changed my mind and started using `gamingroom` instead, so the default here is `gamingrom`, even though it's `gamingroom` everywhere else.
 
 2. I don't think there's anything more you have to edit, but I'm probably wrong.
 
 3. Build the app. Instructions for this are below.
 
-4. Put the contents of the `build` folder in the `public` folder you created on your server when installing the [Gamingroom-API](https://github.com/Ornendil/gamingroom-API).
+4. Put the contents of the `build` folder on your server.
 
 ## Getting Started with Create React App
 
