@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import WindowsIcon from './assets/icons/windows.svg';
 import XboxIcon from './assets/icons/xbox.svg';
+import PlayStationIcon from './assets/icons/playstation.svg';
 import UserIcon from './assets/icons/user.svg';
 import './App.css';
 
@@ -69,8 +70,8 @@ const App = () => {
 
     // Function to render all the gaming stations and their respective sessions
     const renderStations = () => {
-        // Define the stations in the room, including PCs and Xboxes
-        const stations = ['PC4', 'PC3', 'PC2', 'PC1', 'XBOX1', 'XBOX2'];
+        // Define the stations in the room, including PCs and PlatStations
+        const stations = ['PC4', 'PC3', 'PC2', 'PC1', 'PSV1', 'PSV2', 'PSH1', 'PSH2'];
 
         return stations.map((station) => {
             // Filter sessions for the current station
@@ -114,7 +115,7 @@ const App = () => {
             // Render each station card with current and upcoming session information
             return (
                 <div key={station} className={`station-card ${station.toLowerCase()}`}>
-                    <div className='station-name'><img alt="" src={station.startsWith('X') ? XboxIcon : WindowsIcon}/> <h2>{station.replace(/(\d+)$/, ' $1')}</h2></div>
+                    <div className='station-name'><img alt="" src={station.startsWith('PS') ? PlayStationIcon : WindowsIcon}/> <h2>{station.replace(/(\d+)$/, ' $1').replace(/PSV/,'PlayStation Venstre').replace(/PSH/,'PlayStation Høyre')}</h2></div>
                     {/* Display the current session or overdue status */}
                     {currentSession ? (
                         <div className="current-session active">
