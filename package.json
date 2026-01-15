@@ -2,7 +2,7 @@
   "name": "room-display",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/gamingrom-skjerm",
+  "homepage": "/skjerm",
   "proxy": "http://localhost:3002",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
