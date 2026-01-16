@@ -25,6 +25,14 @@ const App = () => {
     const timeOffset = 0;
     const [currentTime, setCurrentTime] = useState(new Date(Date.now() + timeOffset));
 
+
+    const logoBase = process.env.PUBLIC_URL || "";
+    const tenantSlug = tenant?.slug;
+
+    const logoSrc = tenantSlug
+        ? `${logoBase}/tenant-logos/${tenantSlug}.svg`
+        : `${logoBase}/tenant-logos/logo.svg`; // fallback
+
     useEffect(() => {
         const fetchTenant = async () => {
             try {
@@ -258,7 +266,14 @@ const App = () => {
                     {currentTime.toLocaleTimeString()}
                 </div>
                 <div>
-                    <img className="App-logo" src={`${process.env.PUBLIC_URL}/images/logo.svg`} alt='' />
+                    <img
+                        className="App-logo"
+                        src={logoSrc}
+                        alt=""
+                        onError={(e) => {
+                            e.currentTarget.src = `${logoBase}/tenant-logos/logo.svg`;
+                        }}
+                     />
                 </div>
             </header>
             {/* Render the gaming stations as a room map */}
