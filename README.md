@@ -16,33 +16,31 @@ This app doesn't really make sense without first installing [gamingroom-API](htt
 
 4. Put the contents of the `build` folder on your server.
 
-## Getting Started with Create React App
+## Development
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In the project directory, run:
 
-### Available Scripts
+#### `npm install`
 
-In the project directory, you can run:
+Installs the project dependencies.
+
+#### `npm run dev`
+
+Starts the Vite development server on [http://localhost:3000](http://localhost:3000).  
+The `/api` routes are proxied to `http://localhost:3002`.
 
 #### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-#### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Alias for `npm run dev`.
 
 #### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production into the `build` folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### `npm run preview`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Serves the production build locally for a quick verification pass.
+
+## Notes
+
+The app is configured to build with the `/skjerm/` base path so it can continue to be served from that subpath.

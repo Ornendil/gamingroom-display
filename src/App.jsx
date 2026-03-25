@@ -26,12 +26,12 @@ const App = () => {
     const [currentTime, setCurrentTime] = useState(new Date(Date.now() + timeOffset));
 
 
-    const logoBase = process.env.PUBLIC_URL || "";
+    const logoBase = import.meta.env.BASE_URL;
     const tenantSlug = tenant?.slug;
 
     const logoSrc = tenantSlug
-        ? `${logoBase}/tenant-logos/${tenantSlug}.svg`
-        : `${logoBase}/tenant-logos/logo.svg`; // fallback
+        ? `${logoBase}tenant-logos/${tenantSlug}.svg`
+        : `${logoBase}tenant-logos/logo.svg`; // fallback
 
     useEffect(() => {
         const fetchTenant = async () => {
@@ -271,7 +271,7 @@ const App = () => {
                         src={logoSrc}
                         alt=""
                         onError={(e) => {
-                            e.currentTarget.src = `${logoBase}/tenant-logos/logo.svg`;
+                            e.currentTarget.src = `${logoBase}tenant-logos/logo.svg`;
                         }}
                      />
                 </div>
