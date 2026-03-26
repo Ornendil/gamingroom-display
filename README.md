@@ -2,6 +2,8 @@
 
 This is the display screen where the kids can see who's playing and when their time is up.
 
+<img width="1912" height="926" alt="gamingroom-display" src="https://github.com/user-attachments/assets/0723d8e0-695c-442c-8c16-4c7fda2751f9" />
+
 ## Dependencies
 
 This app doesn't really make sense without first installing [gamingroom-API](https://github.com/Ornendil/gamingroom-API) and [gamingroom-admin](https://github.com/Ornendil/gamingroom-admin).
